@@ -26,7 +26,7 @@ public class MutantService {
         repositorio.save(mutantes);
         return resultadoMutante;
     }
-
+/*
     public Object ContarMutante(){
         List<Mutant> mutantes = repositorio.findAll();
         double contar_mutante = 0;
@@ -44,7 +44,7 @@ public class MutantService {
         json.put("ratio", ratio);
         return json;
     }
-
+*/
     public boolean isMutant(String[] dna) {
         int dimension = dna.length;
         int contador = 0;
