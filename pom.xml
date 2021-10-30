@@ -14,7 +14,6 @@
     <name>Mutante</name>
     <description>Mutante</description>
     <properties>
-        <java.version>11</java.version>
     </properties>
     <dependencies>
         <dependency>
