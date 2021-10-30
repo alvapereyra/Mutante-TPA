@@ -28,10 +28,10 @@ public class MutantController {
                 throw new Exception();
             }
         }catch(Exception e){
-            return ResponseEntity.status(HttpStatus.FORBIDDEN).body("error:"+e.getStackTrace());
+            return ResponseEntity.status(HttpStatus.FORBIDDEN).body("error:"+e.getStackTrace() + e.getMessage());
         }
     }
-    /*
+
     @GetMapping("/stats")
     public ResponseEntity<?> ContarMutante(){
         try {
@@ -40,6 +40,4 @@ public class MutantController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("");
         }
     }
-    */
-
 }
