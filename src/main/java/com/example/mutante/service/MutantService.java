@@ -17,9 +17,10 @@ public class MutantService {
 
     public MutantService() {
     }
-    public boolean corroboracion (String[] dna){
+    public boolean corroboracion (Mutant mutantes){
+        String[] dna = new String[mutantes.getDna().size()];
+        dna = mutantes.getDna().toArray(dna);
         boolean resultadoMutante = this.isMutant(dna);
-        Mutant mutantes = new Mutant();
         mutantes.setMutant(resultadoMutante);
         mutantes.setDnaPersistido(dna.toString());
         repositorio.save(mutantes);

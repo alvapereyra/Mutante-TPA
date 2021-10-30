@@ -20,9 +20,7 @@ public class MutantController {
     @PostMapping("")
     public ResponseEntity<?> adnMutante (@RequestBody Mutant adn){
         try{
-            String[] dna = new String[adn.getDna().size()];
-            dna = adn.getDna().toArray(dna);
-            if (mutantService.corroboracion(dna)){
+            if (mutantService.corroboracion(adn)){
                 System.out.println("ENTRO AL IF");
                 return ResponseEntity.status(HttpStatus.OK).body("");
             }else{
