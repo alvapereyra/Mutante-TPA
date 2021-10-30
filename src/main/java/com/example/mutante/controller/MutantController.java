@@ -37,7 +37,7 @@ public class MutantController {
         try {
             return ResponseEntity.status(HttpStatus.OK).body(mutantService.ContarMutante());
         } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("error:"+e.getStackTrace() +", message:" + e.getMessage());
         }
     }
 }
