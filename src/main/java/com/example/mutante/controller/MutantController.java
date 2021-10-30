@@ -28,7 +28,7 @@ public class MutantController {
                 throw new Exception();
             }
         }catch(Exception e){
-            return ResponseEntity.status(HttpStatus.FORBIDDEN).body("error:"+e.getStackTrace() + e.getMessage());
+            return ResponseEntity.status(HttpStatus.FORBIDDEN).body("error:"+e.getStackTrace() +", message:" + e.getMessage());
         }
     }
 
